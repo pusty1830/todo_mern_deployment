@@ -37,5 +37,9 @@ app.use("/api/user", userRouter);
 app.use("/api/task", taskRouter);
 app.use("/api/forgotPassword", forgotPasswordRouter);
 
+app.get("/", (req, res) => {
+  res.send("This is Amitav's Todo App");
+});
+
 //listen
 app.listen(port, () => console.log(`Listening on localhost:${port}`));
